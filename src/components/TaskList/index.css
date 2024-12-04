@@ -1,0 +1,462 @@
+.task-list-con{ 
+    margin-bottom: 20px;
+    margin-top: 2%;
+    width: 90%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+    background-color:#323232;
+    border: 0.1px solid rgb(145, 142, 142);
+    height: 80px;
+}
+
+.completion-btn{
+    height: 30px;
+    width: 30px;
+    border-radius: 25px;
+    color: white;
+    border: 0.5px solid whitesmoke;
+    background-color: aqua;
+}
+.title-des-con{
+    width: 87%;
+    height: 100%;
+    padding-left: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    color: aliceblue;
+}
+.title-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+.todo-title{
+    font-size: 15px;
+    color: rgb(233, 225, 120);
+    font-family: "Lucida Handwriting", cursive;
+}
+.todo-des{
+    font-size: 12px;
+    font-family: "Segoe Script";
+    font-size: 15px;
+}
+.date-p{
+    font-family: Courier, monospace;
+
+    font-size: 13px;
+}
+.icons-con{
+    width: 8%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icons-btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.icon{
+    font-size: 25px;
+    color: white;
+}
+.status-icon{
+    height: 85%;
+    width: 85%;
+    font-weight: bolder;
+    margin-top: 2px;
+}
+
+
+.delete-popup-con{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(39, 37, 37);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cancel-btn{
+    height: 45px;
+    width: 100px;
+    color: white;
+    background-color: rgb(191, 195, 198);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #323232;
+    
+}
+.popup-btns-con{
+    height: 40%;
+    width: 70%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.sure-btn{
+    height: 45px;
+    width: 100px;
+    color: white;
+    background-color: rgb(19, 153, 206);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 10px
+    
+}
+.popup-dialog{
+    font-size: 17px;
+    color: white;   
+}
+
+/*---------EDIT POPUP----------------*/
+
+.edit-popup-con{
+    height:60%;
+    width: 35%;
+    padding: 1%;
+    background-color:rgb(39, 37, 37) ;
+    border-radius: 10px;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    border: 2px solid whitesmoke;
+}
+.edit-task-hea{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+
+}
+@media screen and (max-width:199px){
+    .todo-title{
+        font-size: 9px;
+    }
+    .todo-des{
+        font-size: 6px;
+    }
+    .title-row{
+        width: 100%;
+    }
+    .date-p{
+        font-size: 6px;
+    }
+    .icon{
+        font-size: 8px;
+    }
+    .delete-popup-con{
+        height: 30%;
+        width: 80%;
+        position:fixed;
+        top: 35%;
+        left: 5%;
+    }
+    .sure-btn{
+        width: 60px;
+        height: 30px;
+        font-size: 12px;
+     }
+     .cancel-btn{
+         width: 60px;
+         height: 30px;
+         font-size: 12px;
+     }
+     .popup-btns-con{
+        width: 80%;
+     }
+     .popup-dialog{
+        font-size: 10px;
+        text-align: center;
+     }
+     .popup-btns-con{
+        width: 90%;
+     }
+}
+@media  screen and (min-width:200px) and (max-width:300px) {
+    .completion-btn{
+        height: 25px;
+        width: 25px;
+        border-radius: 15px;
+    }
+    .todo-title{
+        font-size: 10px;
+    }
+    .todo-des{
+        font-size: 9px;
+    }
+    .title-row{
+        width: 100%;
+    }
+    .date-p{
+        font-size: 6px;
+    }
+    .icon{
+        font-size: 13px;
+    }
+    .popup-dialog{
+        font-size: 14px;
+    }
+    .delete-popup-con{
+        height: 30%;
+        width: 80%;
+        position:fixed;
+        top: 35%;
+        left: 5%;
+    }
+    .sure-btn{
+        width: 70px;
+        height: 43px;
+        font-size: 12px;
+     }
+     .cancel-btn{
+         width: 70px;
+         height: 43px;
+         font-size: 12px;
+     }
+     .popup-btns-con{
+        width: 80%;
+     }
+}
+
+@media  screen and (min-width:301px) and (max-width:400px) {
+    .completion-btn{
+        height: 25px;
+        width: 25px;
+        border-radius: 15px;
+    }
+    .title-row{
+        width: 90%;
+    }
+    .todo-title{
+        font-size: 13px;
+    }
+    .todo-des{
+        font-size: 10px;
+    }
+    .icon{
+        font-size: 15px;
+    }
+    .delete-popup-con{
+        height: 30%;
+        width: 70%;
+        position:fixed;
+        top: 35%;
+        left: 8%;
+    }
+    .sure-btn{
+        width: 80px;
+        height: 43px;
+     }
+     .cancel-btn{
+         width: 80px;
+         height: 43px;
+     }
+     .popup-btns-con{
+        width: 80%;
+     }
+}
+
+@media  screen and (min-width:401px) and (max-width:565px) {
+    .completion-btn{
+        height: 25px;
+        width: 25px;
+        border-radius: 15px;
+    }
+    .icons-con{
+        flex-direction: column;
+    }
+    .todo-title{
+        font-size: 14px;
+    }
+    .todo-des{
+        font-size: 12px;
+    }
+    .title-row{
+        width: 80%;
+    }
+    .icon{
+        font-size: 17px;
+    }
+    .delete-popup-con{
+        height: 32%;
+        width: 60%;
+        position:fixed;
+        top: 35%;
+        left: 20%;
+    }
+    .sure-btn{
+        width: 80px;
+        height: 43px;
+     }
+     .cancel-btn{
+         width: 80px;
+         height: 43px;
+     }
+     .popup-btns-con{
+        width: 63%;
+     }
+}
+@media  screen and (min-width:566px) and (max-width:767px) {
+   
+    .todo-des{
+        font-size: 16px;
+    }
+    .todo-title{
+        font-size: 13px;
+    }
+    .todo-des{
+        font-size: 13px;
+    }
+    .icon{
+        font-size: 20px;
+    }
+    .title-row{
+        width: 70%;
+    }
+    .delete-popup-con{
+        height: 30%;
+        width: 50%;
+        position:fixed;
+        top: 35%;
+        left: 25%;
+    }
+    .sure-btn{
+        width: 80px;
+        height: 43px;
+     }
+     .cancel-btn{
+         width: 80px;
+         height: 43px;
+     }
+}
+@media  screen and (min-width:768px) and (max-width:1024px) {
+    .completion-btn{
+        height: 24px;
+        width: 24px;
+        border-radius: 15px;
+    }
+    .icon{
+        font-size: 20px;
+        color: white;
+    }
+    .todo-title{
+        font-size:14px;
+    }
+    .todo-des{
+        font-size: 12px;
+    }
+    .title-row{
+        width: 55%;
+    }
+    .title-row{
+        width: 70%;
+    }
+    .delete-popup-con{
+        height: 30%;
+        width: 30%;
+        position:fixed;
+        top: 35%;
+        left: 35%;
+    }
+    .sure-btn{
+        width: 80px;
+        height: 43px;
+     }
+     .cancel-btn{
+         width: 80px;
+         height: 43px;
+     }
+     .popup-btns-con{
+        width: 70%;
+     }
+}
+
+@media  screen and (min-width:1024px) and (max-width:1200px) {
+    .completion-btn{
+        height: 25px;
+        width: 25px;
+        border-radius: 15px;
+    }
+    .icon{
+        font-size: 21px;
+        color: white;
+    }
+    .todo-title{
+        font-size: 15px;
+    }
+    .todo-des{
+        font-size: 11px;
+    }
+    .title-row{
+        width: 55%;
+    }
+    .sure-btn{
+       width: 80px;
+       height: 43px;
+    }
+    .cancel-btn{
+        width: 80px;
+        height: 43px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .icons-con{
+        width: 10%;
+    }
+    .title-des-con{
+        width: 84%;
+    }
+
+}
+
+
+@media  screen and (max-width:565px) {
+    .completion-btn{
+        height: 25px;
+        width: 25px;
+        border-radius: 15px;
+    }
+    .icons-con{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .edit-popup-con{
+        width: 90%;
+        border: 2px solid white;
+        left: 5%;
+    }
+
+   
+  
+}
+@media screen and (max-width:767px) {
+    .edit-popup-con{
+        width: 60%;
+        border: 2px solid white;
+        left: 20%;
+    }
+    
+}
+
+@media screen and (max-width:450px) {
+    .edit-popup-con{
+        width: 80%;
+        border: 2px solid white;
+        left: 10%;
+    }
+    
+}

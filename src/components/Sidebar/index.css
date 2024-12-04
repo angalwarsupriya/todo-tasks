@@ -1,0 +1,233 @@
+/* menu popup */
+
+.menu-container{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 50vw;
+    border:1px solid whitesmoke;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+}
+
+.sidebar-bg-con{
+    height: 100vh;
+    width: 15vw;
+    background-color: rgb(24, 23, 23);
+   padding-left: 1%;
+    padding-top: 3%;
+}
+.profile-con{
+    height: 35%;
+    width: 100%;
+}
+.profile-img{
+    height: 60%;
+    width: 75%;
+    border-radius: 250px;
+}
+.name{
+    font-size: 27px;
+    margin-left: 8%;
+    margin-top: 10px;
+    color: aliceblue;
+    font-family: "Lucida Handwriting";
+}
+
+.sidebar-filters-con{
+    height: 55%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 8%;
+    margin-top: 8%;
+}
+
+.todo-filter-btn{
+    border: none;
+    background-color: transparent;
+    padding: 0px;
+    outline: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    font-family: "Lucida Handwriting";
+    margin-bottom: 15%;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*-----------------------*/
+
+.todo-filter-btn::before{
+    content: " ";
+    width:2rem ;
+    height: 0.2rem;
+    border-radius: 0.5rem;
+    background:linear-gradient(90deg,#f4e406 0%, rgb(228, 222, 138) 100%);
+    position: absolute;
+    bottom: -0.5rem;
+    opacity: 0;
+    transform: translateX(-1.5rem);
+    transition: all 0.3s ease;
+}
+
+.todo-filter-btn:hover::before{
+    width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.mobile-nav{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(24, 23, 23);
+    padding-left: 4%;
+    padding-right: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-btn{
+    height: 50%;
+    width: 40px;
+    padding: 3px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.create-btn{
+    padding: 0px;
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+    outline: none;
+    background-color: hsl(56, 94%, 49%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+}
+.plus-icon{
+    font-size: 20px;
+    color: black;
+}
+.menu-icon{
+    font-size: 18px;
+    color: rgb(255, 252, 252);
+}
+.popup-form-con{
+    height: 50%;
+    width:50%;   
+    display: flex;
+    background-color: rgb(39, 37, 37);
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+}
+form{
+    height: 100%;
+    width: 100%;
+}
+.popup-label-input-con{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.popup-label{
+    color: antiquewhite;
+    margin-left: 3px;
+    margin-bottom: 3px;
+    font-size: 13px;
+}
+.popup-input{
+    height: 40px;
+    width:90%;
+    border-radius: 10px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    background-color: transparent;
+    border: 0.1px solid rgb(145, 142, 142);
+    color: antiquewhite;
+}
+.popup-add-task-btn{
+    height:30px;
+    width: 80px;
+    color: white;
+    background-color: rgb(255, 191, 0);;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+@media  screen and (max-width:300px) {
+    .popup-label{
+        font-size: 9px;
+    }
+    .popup-input{
+        font-size: 8px;
+    }
+   
+}
+
+@media  screen and (min-width:301px) and (max-width:400px) {
+    .popup-label{
+        font-size: 12px;
+    }
+    .popup-input{
+        font-size: 10px;
+    }
+}
+
+@media  screen and (min-width:401px) and (max-width:565px) {
+    .popup-label{
+        font-size: 15px;
+        margin: 0px;
+    }
+    .popup-input{
+        font-size: 12px;
+    }
+}
+@media  screen and (min-width:566px) and (max-width:767px) {
+    .name{
+        font-size: 17px;
+    }
+}
+@media  screen and (min-width:768px) and (max-width:1024px) {
+    .name{
+        font-size: 20px;
+    }
+}
+
+@media  screen and (min-width:1024px) and (max-width:1200px) {
+    .name{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .sidebar-bg-con{
+        display: none;
+    }
+  
+}
+@media screen and (min-width:767px){
+    .mobile-nav{
+        display: none;
+    }
+}

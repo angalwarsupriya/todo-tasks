@@ -1,0 +1,48 @@
+.barchart-con{
+    height: 50%;
+    width: 100%;
+}
+
+.percent-cart-con{
+    height: 50%;
+    width: 100%;
+   
+}
+.percente-ul-con{
+  height: 90%;
+  width: 90%;
+  list-style-type: none;
+  padding: 1%;
+  border: 1px solid whitesmoke;
+  border-radius: 9px;
+  padding-left: 5%;
+}
+
+.li-name{
+    font-size: 10px;
+    width: 100%;
+    margin-top: 4%;
+}
+.percentage-row-bg-con{
+    height:6px;
+    border-radius: 10px;
+    width: 80%;
+    background-color: rgb(159, 163, 163);
+}
+.percent-top-con{
+    height:6px;
+    border-radius: 10px;
+    background-color: blueviolet;
+}
+@media screen and (max-width:768px) {
+    .barchart-con{
+        height: 100%;
+        width: 50%;
+        padding-top: 20px;
+    }
+    
+    .percent-cart-con{
+        height: 100%;
+        width: 50%;
+    }
+}
