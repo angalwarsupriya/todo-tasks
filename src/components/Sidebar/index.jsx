@@ -5,6 +5,7 @@ import React from 'react';
 import { HiOutlinePlus } from "react-icons/hi";
 import { LuListTodo } from "react-icons/lu";
 import 'reactjs-popup/dist/index.css';
+import { MdHighlightOff } from "react-icons/md";
 
 import { useState } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
@@ -107,6 +108,7 @@ function Sidebar() {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 className='popup-input'
+                required
                />
               </div>
       
@@ -119,6 +121,7 @@ function Sidebar() {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 className='popup-input'
+                required
                />
               </div>
               <div className='popup-label-input-con'>
@@ -129,13 +132,15 @@ function Sidebar() {
                 value={dueDate}
                 onChange={(e) => setDueDate(e.target.value)}
                 className='popup-input'
+                required
                />
               </div>
               <button type="submit" className='popup-add-task-btn'>Add Task</button>
+              <button onClick={toggleaddTaskPopup} className='cancel-button'>Cancel</button>
             </form>
           </div>     
       <button className='menu-btn' onClick={toggleMenu}>
-        {menuStatus ? 'wrong' : <LuListTodo className='menu-icon'/>}
+        {menuStatus ? <MdHighlightOff className='menu-icon'/> : <LuListTodo className='menu-icon'/>}
         
       </button>
     </div>

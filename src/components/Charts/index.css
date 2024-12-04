@@ -6,7 +6,8 @@
 .percent-cart-con{
     height: 50%;
     width: 100%;
-   
+    display: flex;
+    flex-wrap: wrap;   
 }
 .percente-ul-con{
   height: 90%;
@@ -17,23 +18,26 @@
   border-radius: 9px;
   padding-left: 5%;
 }
-
+.progress-name{
+    font-size: 15px;
+    margin-top: 5px;
+}
+.progress-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .li-name{
     font-size: 10px;
     width: 100%;
     margin-top: 4%;
 }
-.percentage-row-bg-con{
-    height:6px;
-    border-radius: 10px;
-    width: 80%;
-    background-color: rgb(159, 163, 163);
-}
-.percent-top-con{
-    height:6px;
-    border-radius: 10px;
-    background-color: blueviolet;
-}
+
+.bar{
+    height: 80px;
+    width: 80px;
+  }
 @media screen and (max-width:768px) {
     .barchart-con{
         height: 100%;
@@ -46,3 +50,113 @@
         width: 50%;
     }
 }
+
+
+.glowingCircle {
+    filter: drop-shadow(0 0 10px rgba(62, 152, 199, 0.8));
+    transition: filter 0.3s ease-in-out;
+    margin-right: 10px;
+  }
+  
+  .glowingCircle:hover {
+    filter: drop-shadow(0 0 20px rgba(62, 152, 199, 1.0));
+  }
+ 
+  /***************************************/
+  @media screen and (max-width:199px){
+    .bar{
+        height: 40px;
+        width: 40px;
+      }
+      .progress-name{
+        font-size:8px;
+      }
+      .glowingCircle{
+        margin-right: 2px;
+      }
+      .progress-row{
+        flex-direction: row;
+        height: 50px;
+        width: 80px;
+      }
+}
+@media  screen and (min-width:200px) and (max-width:300px) {
+    .bar{
+        height: 50px;
+      }
+      .progress-name{
+        font-size: 7px;
+        text-align: start;
+      }
+      .glowingCircle{
+        margin-right: 1px;
+      }
+      .progress-row{
+        height: 80px;
+        width: 40px;
+        margin-right: 5px;
+      }
+}
+
+@media  screen and (min-width:301px) and (max-width:400px) {
+    .bar{
+        height: 50px;
+      }
+      .progress-name{
+        font-size: 10px;
+      }
+      .glowingCircle{
+        margin-right: 18px;
+      }
+}
+
+@media  screen and (min-width:401px) and (max-width:565px) {
+    .bar{
+        height: 60px;
+      }
+      .progress-name{
+        font-size: 10px;
+      }
+      .glowingCircle{
+        margin-right: 30px;
+      }
+}
+@media  screen and (min-width:566px) and (max-width:767px) {
+   
+    .bar{
+        height: 70px;
+      }
+      .progress-name{
+        font-size: 10px;
+      }
+}
+@media  screen and (min-width:768px) and (max-width:1024px) {
+    .bar{
+        height: 60px;
+      }
+      .progress-name{
+        font-size: 10px;
+      }
+}
+
+@media  screen and (min-width:1024px) and (max-width:1300px) {
+    .bar{
+        height: 60px;
+      }
+      .progress-name{
+        font-size: 10px;
+      }
+}
+
+@media screen and (max-width:1000px){
+
+
+}
+
+
+@media  screen and (max-width:565px) {
+   
+   
+  
+}
+

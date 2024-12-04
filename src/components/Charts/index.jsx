@@ -1,17 +1,18 @@
 import React from 'react'
 import './index.css'
-
+import { useSpring, animated } from 'react-spring';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'; 
+import 'react-circular-progressbar/dist/styles.css';
 import { useSelector } from 'react-redux';
 
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { CircularProgressbar,buildStyles  } from 'react-circular-progressbar';
 
-import 'react-circular-progressbar/dist/styles.css';
 
 function Charts() {
-
+    const AnimatedCircularProgressbar = animated(CircularProgressbar);
     const allTasksList= useSelector((store) => store.tasksList)
     
+    const props = useSpring({ value: 20, from: { value: 0 }, config: { duration: 1000 }, });
 
     console.log(allTasksList)
     /* PERCENT TASKS */
@@ -82,7 +83,53 @@ function Charts() {
 
 
     <div className='percent-cart-con'>
-      <ul className='percente-ul-con'>
+    <div className='progress-row'>
+    <div className="glowingCircle" > 
+      <AnimatedCircularProgressbar className='bar'
+      value={progressObjsList[0].percentageNum} text={`${Math.round(progressObjsList[0].percentageNum)}%`} 
+      styles={buildStyles({ pathColor: `rgba(32, 200, 58, 90)`, 
+      textColor: '#fff', trailColor: '#d6d6d6', backgroundColor: 'red', })} /> 
+    </div>
+    <p className='progress-name'>{progressObjsList[0].tashStatusName}</p>
+    </div>
+
+    <div className='progress-row'>
+    <div className="glowingCircle" > 
+    <AnimatedCircularProgressbar className='bar'
+      value={progressObjsList[3].percentageNum} text={`${Math.round(progressObjsList[3].percentageNum)}%`} 
+      styles={buildStyles({ pathColor: `rgba(200, 23, 58, 90)`, 
+      textColor: '#fff'})} /> 
+    </div>
+    <p className='progress-name'>{progressObjsList[3].tashStatusName}</p>
+    </div>
+
+    <div className='progress-row'>
+    <div className="glowingCircle"> 
+      <AnimatedCircularProgressbar className='bar'
+      value={progressObjsList[2].percentageNum} text={`${Math.round(progressObjsList[2].percentageNum)}%`} 
+      styles={buildStyles({ pathColor: `rgba(18, 123, 154, 70)`, 
+      textColor: '#fff'})} /> 
+    </div>
+    <p className='progress-name'>{progressObjsList[2].tashStatusName}</p>
+    </div>
+
+    <div className='progress-row'>
+    <div className="glowingCircle"> 
+      <AnimatedCircularProgressbar className='bar'
+      value={progressObjsList[1].percentageNum} text={`${Math.round(progressObjsList[1].percentageNum)}%`} 
+      styles={buildStyles({ textColor: '#fff', pathColor: `rgba(65, 83, 0)` })} /> 
+    </div>
+    <p className='progress-name'>{progressObjsList[1].tashStatusName}</p>
+    </div>    
+    </div>
+    </>
+  )
+}
+
+export default Charts
+
+/*
+<ul className='percente-ul-con'>
         {progressObjsList.map((eachProgress)=>(
           <li className='percentahebg-box-con' key={eachProgress.tashStatusName}>
               <p className='li-name'>{eachProgress.tashStatusName}</p>
@@ -91,11 +138,4 @@ function Charts() {
               </div>
           </li>
         ))}
-      </ul>
-      
-    </div>
-    </>
-  )
-}
-
-export default Charts
+      </ul>*/

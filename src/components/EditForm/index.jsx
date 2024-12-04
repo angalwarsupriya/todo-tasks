@@ -43,7 +43,8 @@ function EditForm(props) {
                     placeholder="aedittitle here"
                     value={edittitle}
                     onChange={(e) => seteditTitle(e.target.value)}
-                    className='input' />
+                    className='input'
+                    required />
             </div>
   
             <div className='label-input-con'>
@@ -54,7 +55,8 @@ function EditForm(props) {
                     id='editdescription'
                     value={editdescription}
                     onChange={(e) => setDescription(e.target.value)}
-                    className='input' />
+                    className='input' 
+                    required/>
             </div>
 
             <div className='label-input-con'>
@@ -76,10 +78,12 @@ function EditForm(props) {
                     id='date'
                     value={editdueDate}
                     onChange={(e) => seteditDueDate(e.target.value)}
-                    className='input'/>
+                    className='input'
+                    required/>
             </div>
   
-           <button type="submit" className='add-task-btn'>Add Task</button>
+           <button type="submit" className='add-task-btn'>Edit Task</button>
+           <button onClick={toggleEditFormFun} className='cancel-button'>Cancel</button>
         </form>
   </div>
   )

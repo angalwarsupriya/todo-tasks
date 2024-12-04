@@ -44,7 +44,9 @@ function FormLg() {
                     placeholder="add title here"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    className='input' />
+                    className='input' 
+                    required/>
+                    
             </div>
   
             <div className='label-input-con'>
@@ -55,7 +57,8 @@ function FormLg() {
                     id='description'
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
-                    className='input'        />
+                    className='input'     
+                    required   />
             </div>
 
             <div className='label-input-con'>
@@ -77,7 +80,9 @@ function FormLg() {
                     id='date'
                     value={dueDate}
                     onChange={(e) => setDueDate(e.target.value)}
-                    className='input'/>
+                    className='input'
+                    required/>
+                  
             </div>
   
            <button type="submit" className='add-task-btn'>Add Task</button>

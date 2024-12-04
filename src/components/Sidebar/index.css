@@ -9,8 +9,21 @@
     border:1px solid whitesmoke;
     background-color: transparent;
     backdrop-filter: blur(5px);
+    z-index: 30;
 }
-
+.cancel-button{
+background-color: aliceblue;
+padding: 0px;
+border: 1px solid whitesmoke;
+border-radius: 5px;
+outline: none;
+margin-top: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 33px;
+width: 80px;
+}
 .sidebar-bg-con{
     height: 100vh;
     width: 15vw;
@@ -168,7 +181,7 @@ form{
     height:30px;
     width: 80px;
     color: white;
-    background-color: rgb(255, 191, 0);;
+    background-color: rgb(255, 191, 0);
     border: none;
     outline: none;
     font-size: 12px;
