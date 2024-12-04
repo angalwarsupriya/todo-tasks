@@ -41,7 +41,6 @@ function TaskList(props) {
   
 
   const displayBasedOnTaskStatus = () => {
-    console.log(task.taskStatus)
         switch (task.taskStatus){
         case 'TO DO':
           return (
@@ -106,6 +105,7 @@ function TaskList(props) {
        
       </div>
     </li>
+
   )
 }
 

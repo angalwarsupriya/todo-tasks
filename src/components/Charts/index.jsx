@@ -47,7 +47,7 @@ function Charts() {
 
 
     const countTasksByDay = (tasks) => {
-        const days = ['Su', 'Mo', 'Tu', 'We', 'Tu', 'Fr', 'Sa'];
+        const days = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
         const taskCounts = days.map((day) => ({
           name:day,
           uv: tasks.filter((task) => new Date(task.dueDate).getDay() === days.indexOf(day)).length,

@@ -2,7 +2,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  tasks: [{id:0,title:'Reading(ex)', description: 'reading books is a good habit', category:'Home', dueDate:'1-12-2025', taskStatus:'TO DO'}],
+  tasks: [{id:0,title:'READING(ex)', description: 'reading books is a good habit', category:'Home', dueDate:'1-12-2025', taskStatus:'COMPLEATED'},
+    {id:1,title:'LEARN HTML(ex)', description: 'learn html is mandatory as a frontend dev', category:'Work', dueDate:'6-12-2025', taskStatus:'IN PROGRESS'}
+  ],
   filter: 'ALL',
   category:'All'
 };
